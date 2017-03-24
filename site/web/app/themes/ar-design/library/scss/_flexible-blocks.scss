@@ -1,0 +1,45 @@
+.flexible-block {
+	padding-top: 2rem; padding-bottom: 2rem;
+	.block-header { margin-bottom: 1rem; }
+	&.carousel { padding-top: 5rem; padding-bottom: 2rem;}
+	&.slideshow.container-fluid { padding: 0;}
+	&.text-light {
+		p, h1, h2 ,h3, h4 {
+			color: white;
+			text-shadow: 2px 2px 0px #4a4a4a;
+		}
+	}
+	&.no-padding {
+		padding-right: 0; padding-left: 0;
+	}
+	&.back-contain {
+		background-size: contain;
+	}
+	&.back-fixed {
+		background-attachment: fixed;
+	}
+	&.back-repeat-x {
+		background-repeat: repeat-x;
+	}
+	&.back-repeat-y {
+		background-repeat: repeat-y;
+	}
+	&.back-no-repeat {
+		background-repeat: no-repeat;
+	}
+	.slick-carousel {
+		.slick-item {
+			img { margin: 0 auto; padding: 2rem;}
+			.slick-item-text { margin-top: 1rem; text-align: center; color: #a4a4a4}
+			
+		}
+	}
+}
+
+.info-box {
+	background-color: #f4f4f4; padding: 1rem 1rem 3rem; height: 100%;
+	position: relative; 
+	a.btn {
+		position: absolute; bottom: 1rem;
+	}
+}

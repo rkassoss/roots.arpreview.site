@@ -1,0 +1,26 @@
+/*
+Theme Name: AR Design
+Theme URI: http://ardesign.us
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 1
+Author: AR Design
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700|Muli:200,300,400,600,700,800,900');
+
+//Bootstrap
+@import 'bootstrap'; 
+
+//Fonts
+@import 'sassline-base';
+@import 'font-awesome';
+
+//SASS
+@import "variables";
+@import "mixins";
+
+//Styles
+@import "flexible-blocks";
+@import "navigation";
+@import "styles";
+@import "responsive";

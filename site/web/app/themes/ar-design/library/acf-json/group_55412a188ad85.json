@@ -1,0 +1,92 @@
+{
+    "key": "group_55412a188ad85",
+    "title": "Social Media",
+    "fields": [
+        {
+            "key": "field_55412cb0e94aa",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Social Media Link",
+            "sub_fields": [
+                {
+                    "key": "field_55412a38887ae",
+                    "label": "Social Media Link",
+                    "name": "social_media_link",
+                    "type": "url",
+                    "instructions": "Don't forget \"http:\/\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_55412a1f887ad",
+                    "label": "Social Media Icon",
+                    "name": "social_media_icon",
+                    "type": "select",
+                    "instructions": "Select the relevant social icon.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fa-facebook": "Facebook",
+                        "fa-linkedin": "Linkedin",
+                        "fa-twitter": "Twitter",
+                        "fa-google-plus": "Google+",
+                        "fa-instagram": "Instagram",
+                        "fa-pinterest": "Pinterest",
+                        "fa-snapchat-ghost: Snapchat": "fa-snapchat-ghost: Snapchat"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                }
+            ],
+            "collapsed": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1469626398
+}

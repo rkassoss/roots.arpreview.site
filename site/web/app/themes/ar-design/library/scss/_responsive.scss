@@ -1,0 +1,37 @@
+/*XS*/
+@media (max-width: 767px) {
+	.logo { padding-left: 1rem;}
+	.hero-slider {
+		.carousel {
+			.carousel-inner {
+				.item {
+					height: 15rem;
+					.content-box {
+						
+					}
+				}
+			}
+		}
+		.carousel-control {
+			display: none;
+		}
+	}
+}
+/*SM*/
+@media (min-width: 768px) {
+	.hero-slider .carousel .carousel-inner .item {height: 20rem;}
+}
+
+/*MD*/
+@media (min-width: 992px) {
+	.hero-slider .carousel .carousel-inner .item {height: 25rem;}
+}
+
+
+/*LG*/
+@media (min-width: 1200px) {
+}
+
+/*LG*/
+@media (min-width: 1400px) {
+}

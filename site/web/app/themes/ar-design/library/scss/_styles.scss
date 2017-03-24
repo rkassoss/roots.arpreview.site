@@ -1,0 +1,293 @@
+
+.show-grid {
+	background-image: -webkit-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+	background-image: -moz-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+	background-image: -o-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+	background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+	background-repeat: repeat-y;
+	background-size: 100% 1rem;
+}
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media-figure {
+  margin-right: 1em;
+}
+
+.media-body {
+  flex: 1;
+}
+
+.show-grid {
+	background-image: -webkit-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -moz-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -o-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+    background-repeat: repeat-y;
+    background-size: 100% 1rem;
+}
+
+//GENERAL
+
+html, body {
+	-webkit-font-smoothing: antialiased; font-size: 16px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Muli', helvetica; font-weight: 700;
+}
+
+ol, ul {
+	list-style: none;
+	margin-left: 3rem;
+}
+
+.wow {
+	visibility: hidden;
+}
+
+img { max-width: 100%; height: auto; width: auto;}
+.aligncenter { float: none; display: block; margin: 0 auto;}
+.alignleft { float: left; margin: 0 1rem 1rem 0;}
+.alignright { float: right; margin: 0 0 1rem 1rem;}
+
+.media-body {
+	width: auto;
+}
+
+//LINKS
+.btn-default { 
+	@include transition(color 0.2s); @include transition(background 0.2s);
+	&:hover { 
+	}
+}
+
+a:hover {
+	text-decoration: none; 
+	@include transition(color 0.2s);
+}
+.clickable:hover { 
+	cursor: pointer;
+	a {}
+	&:hover a {}
+}
+
+//VIDEO EMBED
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 2rem; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//HOME
+.hero-slider { 
+	max-width: 1600px; margin: 0 auto 2rem;
+		.carousel {
+			overflow: hidden;
+			.carousel-inner .item {
+				.item-image {
+					position: absolute;
+					top: 0; right: 0; bottom: 0; left: 0;
+					background-position: center center; 
+					background-repeat: no-repeat; 
+					background-size: cover;
+				}
+				.content-box { 
+					position: absolute;
+					margin: 0 auto;
+					width: 100%; 
+					bottom: 0;
+					background-color: rgba(0, 0, 0, 0.25); 
+					padding: 2rem 0;
+					h1, h2, h3, h4, p {
+						color: white;
+					}
+				}
+			}
+		}
+		.carousel-control {
+			background-image: none;
+			top: 50%;
+			margin-top: -1.5rem; 
+			width: 3rem; 
+			height: 3rem; 
+			text-shadow: none;
+			background-color: rgba(0, 0, 0, 0.25); 
+			padding: .5rem; color: white;
+			@include transition(all,.3s);
+			i.fa {
+				line-height: 2rem;
+			}
+			&.right {
+				right: -3rem;
+			}
+			&.left {
+				left: -3rem;
+			}
+		}
+		.carousel-indicators {
+			bottom: 0px;
+		    right: -2rem;
+		    left: auto;
+		    text-align: right;
+		    @include transition(all,.3s);
+		}
+}
+.hero-slider:hover {
+	.carousel-control {
+		&.right {
+			right: 0;
+		}
+		&.left {
+			left: 0;
+		}
+	}
+	.carousel-indicators {
+		right: 1rem;
+	}
+}
+
+footer {
+	ul, ol {
+		margin: 0;
+	}
+}
+
+.flexbox_grid {
+	margin-top: 1rem;
+	.flex-grid {
+		@include flexbox; margin: 0; margin-left: -1%;
+		-webkit-justify-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.info-box {
+		padding: 0; position: relative; 
+		text-align: center; z-index: 0; margin: 0;
+		border: 1px solid rgba($grey,.5); padding-bottom: 1rem;
+		@include transition(border-color, .3s);
+		.box-header {
+			@include transition(background-color, .3s);
+			background-color: $grey; padding: 1rem;
+		}
+		h3 { 
+			margin: 0; font-size: 1.75rem; 
+			line-height: 2rem; 
+		}
+		h5 {
+			margin: 0 auto; min-height: 30px; max-width: 280px;
+		}
+		h4 {
+			color: $primary;
+		}
+		.info-box-image {
+			position: relative;
+		}
+		.info-box-image img { 
+			margin: 0 auto 1rem;
+		}
+		ul {
+			padding: 0; margin: 0; list-style: none;
+			li {
+				padding: 5px 0; font-weight: 700; color: #8e8e8e;
+			}
+		}
+		.actions {
+			position: absolute; bottom: 1rem; left: 0; right: 0;
+			text-align: center; @include opacity(0); 
+			@include transition(opacity,.3s); 
+			@include transition(bottom, .75s);
+		}
+		.btn:hover {
+			color: white;
+		}
+		&.special {
+			border: 1px solid rgba($primary,.75); z-index: 1;
+			&:after {
+			    width: 85px; height: 85px;
+			    border-radius: 50px;
+			    position: absolute;
+			    top: -35px; right: -35px;
+			    display: block; background: $primary;
+			    color: white; z-index: 10;
+			    font-size: 18px; font-weight: bold;
+			    line-height: 16px; padding-top: 25px;
+			    box-shadow: 0 0 18px rgba(36, 47, 19, 0.26);
+			    @include transition(background,.3s);
+			}
+			.box-header {
+				background-color: rgba($primary,.75);
+				color: white;
+				h3,h4 {
+					color: white;
+				}
+			}
+			&:hover {
+				border-color: #2985f8;
+				.btn-quote, .box-header {
+					background-color: #2985f8;
+				}
+				&:after {
+					background: #2985f8;
+				}
+			}
+		}
+		&:hover {
+			border-color: darken($grey,.1);
+			.box-header {
+				background-color: darken($grey,.1);
+			}
+			.actions {
+				bottom: 40%; @include opacity(1);
+			}
+		}
+	}
+}

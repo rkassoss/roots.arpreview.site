@@ -1,0 +1,83 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin clip-path($clip) {
+	-webkit-clip-path: $clip;
+	-moz-clip-path: $clip;
+	-ms-clip-path: $clip;
+	clip-path: $clip;
+}
+
+@mixin ellipsis(){
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 100%;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Stretch child element on top of parent
+@mixin absolute ($top, $right, $bottom, $left) {
+	position: absolute; margin: auto;
+	top: $top; right: $right; right: $bottom; left: $left;
+}
+
+// FLEXBOX
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-direction($attr) {
+	-ms-flex-direction: $attr;
+	-webkit-flex-direction: $attr;
+	flex-direction: $attr;
+}
+
+@mixin justify-content($attr) {
+	-ms-flex-pack: $attr;
+	-webkit-justify-content: $attr;
+	justify-content: $attr;
+}
+
+@mixin flex($attr) {
+	-webkit-box-flex: $attr;
+	-webkit-flex: $attr;
+	-ms-flex: $attr;
+	flex: $attr;
+}
